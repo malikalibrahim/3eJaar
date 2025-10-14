@@ -1,0 +1,195 @@
+
+:root {
+    --primary-color: #2c3e50; /* Donkerblauw/grijs voor tekst */
+    --secondary-color: #ffffff; /* Wit */
+    --background-color: #f4f6f9; /* Lichtgrijs */
+    --accent-color: #27ae60; /* Groen voor hoop */
+    --accent-hover: #2ecc71;
+    --danger-color: #e74c3c; /* Rood voor verwijderen */
+    --border-color: #dfe4ea;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h2 {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigatie (in header.php) */
+nav {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    color: var(--secondary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: rgba(255,255,255,0.1);
+    text-decoration: none;
+}
+
+/* Formulieren */
+form {
+    margin-top: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="submit"],
+.button {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+input[type="submit"]:hover,
+.button:hover {
+    background-color: var(--accent-hover);
+    text-decoration: none;
+}
+
+/* Tabellen */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #ecf0f1;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e9ecef;
+}
+
+td a {
+    margin-right: 10px;
+}
+
+/* Specifieke knoppen en links */
+.button-delete {
+    background: none;
+    border: none;
+    color: var(--danger-color);
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.button-delete:hover {
+    color: #c0392b;
+}
+
+.error-message {
+    color: var(--danger-color);
+    background-color: #fdd;
+    border: 1px solid var(--danger-color);
+    padding: 10px;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: #bdc3c7;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
